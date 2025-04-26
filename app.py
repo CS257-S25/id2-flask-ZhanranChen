@@ -22,6 +22,7 @@ def clean_results(results):
 
 @app.route('/sightings/year/<int:year>')
 def sightings_by_year(year):
+    """Return UFO sightings for a given year as JSON."""
     if year is None:
         return jsonify({"error": "Missing or invalid 'year' query parameter."}), 400
     
