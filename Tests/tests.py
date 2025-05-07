@@ -12,7 +12,7 @@ class FlaskAppTestCase(unittest.TestCase):
         """Test that home route returns status 200 and contains expected text."""
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'UFO Sightings API', response.data)
+        self.assertIn(b'Welcome to the UFO Sightings', response.data)
 
     def test_valid_year_route(self):
         """Test valid year route returns 200 and JSON list."""
