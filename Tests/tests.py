@@ -1,8 +1,9 @@
+'''Unit tests for flask app'''
 import unittest
 from app import app
 
 class FlaskAppTestCase(unittest.TestCase):
-
+    '''Class that test the routes in app'''
     def setUp(self):
         """Set up test client for the Flask app."""
         self.app = app.test_client()
@@ -23,7 +24,7 @@ class FlaskAppTestCase(unittest.TestCase):
     def test_invalid_year_route(self):
         """Test invalid year route returns 404 for bad URL segment."""
         response = self.app.get('/sightings/year/banana')
-        self.assertEqual(response.status_code, 404)  
+        self.assertEqual(response.status_code, 404)
 
 if __name__ == '__main__':
     unittest.main()

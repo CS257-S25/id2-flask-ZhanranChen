@@ -36,4 +36,3 @@ def sightings_by_year(year):
 
 if __name__ == '__main__':
     app.run()
-
